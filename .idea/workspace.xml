@@ -1233,28 +1233,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/linked_list/searching.go">
+        <entry file="file://$PROJECT_DIR$/array/finding-counting-duplicates.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1683">
-              <caret line="103" column="18" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
+            <state relative-caret-position="-709">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/linked_list/inserting.go">
+        <entry file="file://$PROJECT_DIR$/linked_list/reversing_ll.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="19" selection-start-line="6" selection-start-column="4" selection-end-line="15" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/linked_list/delete_element.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+            <state relative-caret-position="-1055">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
               <folding>
                 <element signature="e#14#41#0" expanded="true" />
               </folding>
@@ -1263,31 +1254,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/linked_list/check_llsorted.go">
+        <entry file="file://$PROJECT_DIR$/design_patterns/solid/SRP.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-              <folding>
-                <element signature="e#14#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="257">
+              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/linked_list/remove_duplicates.go">
+        <entry file="file://$PROJECT_DIR$/design_patterns/solid/open_close_principle.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/go/src/runtime/proc.go">
+        <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3451">
-              <caret line="208" selection-start-line="208" selection-end-line="208" />
+            <state relative-caret-position="364">
+              <caret line="518" selection-start-line="518" selection-end-line="518" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/go/src/runtime/panic.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="689" selection-start-line="689" selection-end-line="689" />
             </state>
           </provider>
         </entry>
@@ -1369,6 +1366,9 @@
         <option value="$PROJECT_DIR$/linked_list/delete_element.go" />
         <option value="$PROJECT_DIR$/linked_list/check_llsorted.go" />
         <option value="$PROJECT_DIR$/linked_list/remove_duplicates.go" />
+        <option value="$PROJECT_DIR$/linked_list/reversing_ll.go" />
+        <option value="$PROJECT_DIR$/design_patterns/solid/SRP.go" />
+        <option value="$PROJECT_DIR$/design_patterns/solid/open_close_principle.go" />
       </list>
     </option>
   </component>
@@ -1383,6 +1383,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1393,12 +1394,13 @@
             <path>
               <item name="awesomeProject3" type="b2602c69:ProjectViewProjectNode" />
               <item name="awesomeProject3" type="462c0819:PsiDirectoryNode" />
-              <item name="array" type="462c0819:PsiDirectoryNode" />
+              <item name="design_patterns" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="awesomeProject3" type="b2602c69:ProjectViewProjectNode" />
               <item name="awesomeProject3" type="462c0819:PsiDirectoryNode" />
-              <item name="basics" type="462c0819:PsiDirectoryNode" />
+              <item name="design_patterns" type="462c0819:PsiDirectoryNode" />
+              <item name="solid" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="awesomeProject3" type="b2602c69:ProjectViewProjectNode" />
@@ -1409,7 +1411,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1443,7 +1444,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build check_llsorted.go">
+  <component name="RunManager" selected="Go Build.go build reversing_ll.go">
     <configuration name="go build check_llsorted.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject3" />
       <working_directory value="$PROJECT_DIR$" />
@@ -1471,31 +1472,31 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build remove_duplicates.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject3" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/basics/main.go" />
+      <filePath value="$PROJECT_DIR$/linked_list/remove_duplicates.go" />
       <package value="awesomeProject3" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build searching.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build reversing_ll.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject3" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/linked_list/searching.go" />
+      <filePath value="$PROJECT_DIR$/linked_list/reversing_ll.go" />
       <package value="awesomeProject3" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build reversing_ll.go" />
+        <item itemvalue="Go Build.go build remove_duplicates.go" />
         <item itemvalue="Go Build.go build check_llsorted.go" />
         <item itemvalue="Go Build.go build delete_element.go" />
         <item itemvalue="Go Build.go build inserting.go" />
-        <item itemvalue="Go Build.go build searching.go" />
-        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -1503,13 +1504,13 @@
     <frame x="0" y="23" width="1440" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3645533" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37103745" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49423632" visible="true" weight="0.33001423" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49567723" weight="0.38264582" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49423632" weight="0.33001423" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49567723" visible="true" weight="0.38264582" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1815,6 +1816,29 @@
           <line>53</line>
           <option name="timeStamp" value="90" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/linked_list/remove_duplicates.go</url>
+          <line>17</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/linked_list/reversing_ll.go</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/linked_list/reversing_ll.go</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/linked_list/reversing_ll.go</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -1870,22 +1894,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8806">
-          <caret line="518" selection-start-line="518" selection-end-line="518" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/go.mod">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file:///usr/local/go/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11645">
-          <caret line="689" selection-start-line="689" selection-end-line="689" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/array/find_missing_element.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -1906,13 +1916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1666">
           <caret line="100" selection-start-line="100" selection-end-line="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/array/finding-counting-duplicates.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1954,10 +1957,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/go/src/runtime/proc.go">
+    <entry file="file://$PROJECT_DIR$/linked_list/delete_element.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3451">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        <state relative-caret-position="1071">
+          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+          <folding>
+            <element signature="e#14#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linked_list/check_llsorted.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="20" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#14#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linked_list/remove_duplicates.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#14#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1992,30 +2018,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linked_list/delete_element.go">
+    <entry file="file://$PROJECT_DIR$/array/finding-counting-duplicates.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="66" column="1" lean-forward="true" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        <state relative-caret-position="-709">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="518" selection-start-line="518" selection-end-line="518" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="689" selection-start-line="689" selection-end-line="689" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3374">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/linked_list/reversing_ll.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1055">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding>
             <element signature="e#14#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linked_list/check_llsorted.go">
+    <entry file="file://$PROJECT_DIR$/design_patterns/solid/SRP.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-          <folding>
-            <element signature="e#14#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="257">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/linked_list/remove_duplicates.go">
+    <entry file="file://$PROJECT_DIR$/design_patterns/solid/open_close_principle.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>

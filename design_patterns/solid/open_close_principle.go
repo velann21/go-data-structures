@@ -1,0 +1,3 @@
+package solid
+
+//wrong approach

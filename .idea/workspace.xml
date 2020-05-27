@@ -21,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../apiblue.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linked_list/reversing_ll.go" beforeDir="false" afterPath="$PROJECT_DIR$/linked_list/reversing_ll.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pkg/bind/bind_to_host.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pkg/bind/hostreader/hostreader.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pkg/bind/hostreader/hostreader_test.go" beforeDir="false" />
@@ -1233,19 +1234,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/array/finding-counting-duplicates.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-709">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/linked_list/reversing_ll.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1055">
-              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+            <state relative-caret-position="-267">
+              <caret line="71" column="24" selection-start-line="69" selection-start-column="8" selection-end-line="71" selection-end-column="24" />
               <folding>
                 <element signature="e#14#41#0" expanded="true" />
               </folding>
@@ -1254,19 +1246,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/design_patterns/solid/SRP.go">
+        <entry file="file://$PROJECT_DIR$/design_patterns/solid/open_close_principle.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/linked_list/concat_2ll.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="26" selection-start-line="9" selection-end-line="26" />
+              <folding>
+                <element signature="e#14#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/design_patterns/solid/open_close_principle.go">
+        <entry file="file://$PROJECT_DIR$/linked_list/merge_2ll.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="282">
+              <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+              <folding>
+                <element signature="e#14#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1274,7 +1281,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
+            <state relative-caret-position="8806">
               <caret line="518" selection-start-line="518" selection-end-line="518" />
             </state>
           </provider>
@@ -1283,7 +1290,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/local/go/src/runtime/panic.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="11645">
               <caret line="689" selection-start-line="689" selection-end-line="689" />
             </state>
           </provider>
@@ -1366,9 +1373,11 @@
         <option value="$PROJECT_DIR$/linked_list/delete_element.go" />
         <option value="$PROJECT_DIR$/linked_list/check_llsorted.go" />
         <option value="$PROJECT_DIR$/linked_list/remove_duplicates.go" />
-        <option value="$PROJECT_DIR$/linked_list/reversing_ll.go" />
         <option value="$PROJECT_DIR$/design_patterns/solid/SRP.go" />
         <option value="$PROJECT_DIR$/design_patterns/solid/open_close_principle.go" />
+        <option value="$PROJECT_DIR$/linked_list/reversing_ll.go" />
+        <option value="$PROJECT_DIR$/linked_list/concat_2ll.go" />
+        <option value="$PROJECT_DIR$/linked_list/merge_2ll.go" />
       </list>
     </option>
   </component>
@@ -1383,7 +1392,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1411,6 +1419,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1444,7 +1453,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build reversing_ll.go">
+  <component name="RunManager" selected="Go Build.go build merge_2ll.go">
     <configuration name="go build check_llsorted.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject3" />
       <working_directory value="$PROJECT_DIR$" />
@@ -1454,20 +1463,20 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build delete_element.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build concat_2ll.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject3" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/linked_list/delete_element.go" />
+      <filePath value="$PROJECT_DIR$/linked_list/concat_2ll.go" />
       <package value="awesomeProject3" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build inserting.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build merge_2ll.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject3" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/linked_list/inserting.go" />
+      <filePath value="$PROJECT_DIR$/linked_list/merge_2ll.go" />
       <package value="awesomeProject3" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -1492,11 +1501,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build merge_2ll.go" />
+        <item itemvalue="Go Build.go build concat_2ll.go" />
         <item itemvalue="Go Build.go build reversing_ll.go" />
         <item itemvalue="Go Build.go build remove_duplicates.go" />
         <item itemvalue="Go Build.go build check_llsorted.go" />
-        <item itemvalue="Go Build.go build delete_element.go" />
-        <item itemvalue="Go Build.go build inserting.go" />
       </list>
     </recent_temporary>
   </component>
@@ -1504,13 +1513,13 @@
     <frame x="0" y="23" width="1440" height="814" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37103745" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3775216" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49423632" weight="0.33001423" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49567723" visible="true" weight="0.38264582" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49567723" visible="true" weight="0.38264582" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1824,20 +1833,35 @@
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/linked_list/reversing_ll.go</url>
           <line>28</line>
-          <properties />
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/linked_list/reversing_ll.go</url>
-          <line>89</line>
-          <properties />
+          <line>86</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/linked_list/reversing_ll.go</url>
-          <line>105</line>
-          <properties />
+          <line>102</line>
           <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/linked_list/concat_2ll.go</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/linked_list/merge_2ll.go</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/linked_list/merge_2ll.go</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1987,6 +2011,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/go/src/runtime/proc.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3374">
+          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/array/finding-counting-duplicates.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/design_patterns/solid/SRP.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8806">
+          <caret line="518" selection-start-line="518" selection-end-line="518" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11645">
+          <caret line="689" selection-start-line="689" selection-end-line="689" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/array/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2516">
@@ -2018,55 +2077,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/array/finding-counting-duplicates.go">
+    <entry file="file://$PROJECT_DIR$/design_patterns/solid/open_close_principle.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-709">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/runtime/asm_amd64.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="518" selection-start-line="518" selection-end-line="518" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="689" selection-start-line="689" selection-end-line="689" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/go/src/runtime/proc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3374">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/linked_list/reversing_ll.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1055">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        <state relative-caret-position="-267">
+          <caret line="71" column="24" selection-start-line="69" selection-start-column="8" selection-end-line="71" selection-end-column="24" />
           <folding>
             <element signature="e#14#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design_patterns/solid/SRP.go">
+    <entry file="file://$PROJECT_DIR$/linked_list/concat_2ll.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="24" column="36" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="290">
+          <caret line="26" selection-start-line="9" selection-end-line="26" />
+          <folding>
+            <element signature="e#14#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/design_patterns/solid/open_close_principle.go">
+    <entry file="file://$PROJECT_DIR$/linked_list/merge_2ll.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="282">
+          <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+          <folding>
+            <element signature="e#14#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -65,24 +65,21 @@ func (node *NodeItem9) ReverseLinkedListWithAuxilary()error{
 
 	auxilary := [12]int{}
 	last := node.Head
-	var prev *Node9
 	i := 0
 	for last != nil{
 		auxilary[i] = last.Data
 		i++
 		last = last.Next
-		prev = last
 	}
+
 
 	i--
 	last = node.Head
-
 	for i >= 0 && last != nil{
 		last.Data = auxilary[i]
 		i--
 		last = last.Next
 	}
-    fmt.Println(prev)
 	return nil
 }
 

@@ -91,4 +91,3 @@ func (bf *BetterFilter) Filter(prod []Product, spec Specification) *[]Product {
 	}
 	return &result
 }
-

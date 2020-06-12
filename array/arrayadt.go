@@ -16,30 +16,7 @@ func main(){
 	sli[0] = "Nandhakumar"
 	fmt.Println(sli2)
 	fmt.Println(sli, sli2)
-
-	//
-	//twd := [3][2]int{}
-    //twd[0][0] = 1
-	//twd[0][1] = 2
-	//twd[1][0] = 2
-	//twd[1][1] = 2
-	//twd[2][0] = 2
-	//twd[2][1] = 2
-	//fmt.Println(twd)
-
-
 	goFrom1To10()
-	//newArr := [10]string{}
-	//Append(newArr, "velan")
-	//Append(newArr, "indu")
-	//Append(newArr, "mani")
-	//Append(newArr, "karu")
-	//Append(newArr, "saru")
-	//Append(newArr, "baru")
-
-
-	//len := Length(&arr)sl = append(sl, "velan")
-	//fmt.Println(len)
 }
 
 func Length(array *[10]string)int{

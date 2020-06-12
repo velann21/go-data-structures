@@ -73,6 +73,8 @@ func (node *NodeItem14) DisplayInBothDir()error{
 		last = last.Next
 	}
 
+
+
 	for prev != nil{
 		fmt.Println(prev.Data)
 		prev = prev.Prev

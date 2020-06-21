@@ -1,4 +1,4 @@
-package array
+package main
 
 import "fmt"
 
@@ -9,6 +9,7 @@ func main()  {
 	     //missi     6+2(8), 7+3(10), 8+3(11)
 	    //       6,6,6, 8, 8
 	//findAllMissingElementUsingBinSet(arr,12)
+	findMissingFirstElementInArr(arr)
 	findAllMissingElement(arr)
 	//fmt.Println(missingElement)
 }

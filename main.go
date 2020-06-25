@@ -28,6 +28,7 @@ const (
 func main() {
 
 
+
 	err := returnError()
 	if err != nil{
 		if err.Error() == "Invalid request"{
@@ -94,6 +95,7 @@ func New(url []string) (*EtcdClient, error) {
 
 	return &EtcdClient{client: c, url: url}, nil
 }
+
 
 
 func returnError()error{

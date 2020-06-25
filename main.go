@@ -3,6 +3,9 @@ package main
 import (
 	//"context"
 	_ "encoding/json"
+	"errors"
+	"fmt"
+
 	//"fmt"
 	v3 "github.com/velann21/etcd/clientv3"
 	"github.com/velann21/etcd/pkg/transport"
@@ -23,6 +26,18 @@ const (
 )
 
 func main() {
+
+
+
+	err := returnError()
+	if err != nil{
+		if err.Error() == "Invalid request"{
+			goto backupstatement
+		}
+	}
+	fmt.Println("Normal exec")
+	backupstatement:
+		fmt.Println("Am excsd")
 
 	//ec, err := New([]string{"https://192.168.1.221:2379"})
 	//if err != nil{
@@ -81,3 +96,8 @@ func New(url []string) (*EtcdClient, error) {
 	return &EtcdClient{client: c, url: url}, nil
 }
 
+
+
+func returnError()error{
+	return  errors.New("Invalid request12")
+}

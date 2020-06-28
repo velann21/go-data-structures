@@ -57,6 +57,3 @@ func maxProduct(input []int)int{
 	}else {
 		return prod2
 	}
-}
-
-

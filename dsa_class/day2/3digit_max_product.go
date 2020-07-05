@@ -19,6 +19,7 @@ func main() {
 	fmt.Println(maxProduct([]int{-10,-2,-6,1,6,4}))
 }
 
+
 func maxProduct(input []int)int {
 
 	//Make the min as max int
@@ -55,3 +56,4 @@ func maxProduct(input []int)int {
 		return prod2
 	}
 }
+

@@ -19,9 +19,10 @@ func main() {
 	fmt.Println(maxProduct([]int{-10,-2,-6,1,6,4}))
 }
 
-func maxProduct(input []int)int{
 
-    //Make the min as max int
+func maxProduct(input []int)int {
+
+	//Make the min as max int
 	min1 := math.MaxInt32
 	min2 := math.MaxInt32
 	//Make the max as min int
@@ -29,31 +30,30 @@ func maxProduct(input []int)int{
 	max2 := math.MinInt32
 	max3 := math.MinInt32
 
-	for _, v := range input{
-		if v < min1{
+	for _, v := range input {
+		if v < min1 {
 			min2 = min1
 			min1 = v
-		}else if v < min2{
+		} else if v < min2 {
 			min2 = v
-		}else if v > max1{
+		} else if v > max1 {
 			max3 = max2
 			max2 = max1
 			max1 = v
-		}else if v > max2{
+		} else if v > max2 {
 			max3 = max2
 			max2 = v
-		}else if v > max3 {
+		} else if v > max3 {
 			max3 = v
 		}
 	}
+	prod1 := max1 * max2 * max3
+	prod2 := min1 * min2 * max1
 
-	fmt.Println(max1, max2, max3)
-	fmt.Println(min1, min2, max1)
-	prod1 := max1*max2*max3
-	prod2 := min1*min2*max1
-
-    if prod1>prod2{
+	if prod1 > prod2 {
 		return prod1
-	}else {
+	} else {
 		return prod2
 	}
+}
+

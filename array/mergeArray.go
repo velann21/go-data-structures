@@ -13,7 +13,6 @@ func main() {
 }
 
 func mergeSortedArray(arr1 []int, arr2 []int) []int{
-
 	if len(arr1) <= 0 && len(arr2) <= 0 {
 		return nil
 	}

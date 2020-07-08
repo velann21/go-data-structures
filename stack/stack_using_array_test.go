@@ -1,4 +1,4 @@
-package stack
+package main
 
 import (
 	"fmt"
@@ -50,5 +50,6 @@ func TestStack_Peek(t *testing.T) {
 		fmt.Println(err)
 	}
 }
+
 
 

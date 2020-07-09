@@ -2,23 +2,24 @@ package main
 
 import (
 	"errors"
+	"fmt"
 )
 
-//func main()  {
-//	node := Nodestruct{}
-//	node.Insert(10)
-//	node.Insert(20)
-//	node.Insert(30)
-//	node.Insert(40)
-//	node.Insert(50)
-//	node.Insert(60)
-//
-//	err := node.ReverseLinkedList()
-//	if err != nil{
-//		fmt.Println(err)
-//	}
-//	fmt.Println(node)
-//}
+func main()  {
+	node := Nodestruct{}
+	node.Insert(10)
+	node.Insert(20)
+	node.Insert(30)
+	node.Insert(40)
+	node.Insert(50)
+	node.Insert(60)
+
+	err := node.ReverseLinkedList()
+	if err != nil{
+		fmt.Println(err)
+	}
+	fmt.Println(node)
+}
 
 
 type Node struct {

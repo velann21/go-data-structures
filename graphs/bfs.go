@@ -1,23 +1,23 @@
 package main
 
 import (
-	q "awesomeProject3/queue"
+	//q "awesomeProject3/queue"
 	"fmt"
 )
 
 func main() {
 
 	// Type1
-	am := [][]int{
-		{0,0,0,0,0,0,0},
-		{0,0,1,1,0,0,0},
-		{0,1,0,0,1,0,0},
-		{0,1,0,0,0,0,0},
-		{0,0,1,1,0,1,1},
-		{0,0,0,0,1,0,0},
-		{0,0,0,0,1,0,0},
-	}
-	BFS(am, 6, 7)
+	//am := [][]int{
+	//	{0,0,0,0,0,0,0},
+	//	{0,0,1,1,0,0,0},
+	//	{0,1,0,0,1,0,0},
+	//	{0,1,0,0,0,0,0},
+	//	{0,0,1,1,0,1,1},
+	//	{0,0,0,0,1,0,0},
+	//	{0,0,0,0,1,0,0},
+	//}
+	//BFS(am, 6, 7)
 
     //Type2
 	node := NodeItems{}
@@ -46,32 +46,30 @@ func main() {
 
 }
 
-func BFS (graph [][]int, startPoint int, verticesSize int){
-
-	fmt.Print(startPoint,",")
-	visited := make([]int, verticesSize)
-	visited[startPoint] = 1
-	queue := q.New()
-
-	queue.Enqueue(startPoint)
-
-	for !queue.IsEmpty() {
-		vertice := queue.Dequeue()
-		for v:=1; v<verticesSize; v++{
-			if graph[vertice][v]==1 && visited[v] == 0 {
-				fmt.Print(v, ",")
-				visited[v] = 1
-				queue.Enqueue(v)
-			}
-		}
-	}
-
-
-
-
-
-}
-
+//func BFS (graph [][]int, startPoint int, verticesSize int){
+//	visited := make([]int, verticesSize)
+//	visited[startPoint] = 1
+//	queue := q.New()
+//
+//	queue.Enqueue(startPoint)
+//
+//	for !queue.IsEmpty() {
+//		vertice := queue.Dequeue()
+//		for v:=1; v<verticesSize; v++{
+//			if graph[vertice][v]==1 && visited[v] == 0 {
+//				fmt.Print(v, ",")
+//				visited[v] = 1
+//				queue.Enqueue(v)
+//			}
+//		}
+//	}
+//
+//
+//
+//
+//
+//}
+//
 
 
 type Node1 struct {

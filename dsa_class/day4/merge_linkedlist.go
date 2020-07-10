@@ -38,6 +38,7 @@ func (node *NodeStruct15) MergeLinkedList(ll2 *NodeStruct15){
 			f = f.Next
 		}
 		last.Next = nil
+
 	}else{
 		third = s
 		last = s
@@ -48,26 +49,52 @@ func (node *NodeStruct15) MergeLinkedList(ll2 *NodeStruct15){
 	}
 	for f != nil && s!= nil{
 		if f.Data < s.Data{
+			last.Next = f
 			last = f
 			f = f.Next
-			last = nil
+			last.Next = nil
 		}else {
+			last.Next = s
 			last = s
 			s = s.Next
-			last = nil
+			last.Next = nil
 		}
 	}
 
 	if s != nil && last != nil{
 		for s != nil {
 			last.Next = s
-			s =s.Next
+			last = s
+			s = s.Next
+			last.Next = nil
 		}
 	}else if f != nil && last != nil{
 		for f != nil {
 			last.Next = f
-			f =f.Next
+			last = f
+			f = f.Next
+			last.Next = nil
 		}
 	}
+}
+
+func main()  {
+	node := &NodeStruct15{}
+	node.Insert(10)
+	node.Insert(20)
+	node.Insert(30)
+	node.Insert(40)
+	node.Insert(50)
+	node.Insert(60)
+
+	node1 := &NodeStruct15{}
+	node1.Insert(100)
+	node1.Insert(200)
+	node1.Insert(300)
+	node1.Insert(400)
+	node1.Insert(500)
+	node1.Insert(600)
+
+	node.MergeLinkedList(node1)
 
 }

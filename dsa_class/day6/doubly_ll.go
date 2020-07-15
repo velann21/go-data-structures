@@ -116,8 +116,7 @@ func (node *NodeStruct) RemoveEnd(){
 		last = last.Next
 	}
 
-	temp := last
-	temp.Next = nil
-	last = nil
+	last = last.Prev
+	last.Next = nil
 }
 

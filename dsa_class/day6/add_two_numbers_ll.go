@@ -78,4 +78,5 @@ func (node *NodePtrStruct) addTwoNumbers(node2 *NodePtrStruct) *NodePtr {
 
 	return node.Head
 
+
 }

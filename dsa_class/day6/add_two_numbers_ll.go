@@ -1,7 +1,24 @@
 package main
 
+import "fmt"
 
 func main(){
+
+	node := &NodePtrStruct{}
+	node.Insert(10)
+	node.Insert(20)
+	node.Insert(30)
+
+	node2 := &NodePtrStruct{}
+	node2.Insert(1)
+	node2.Insert(2)
+	node2.Insert(3)
+
+	sumList := node.addTwoNumbers(node2)
+	for sumList!= nil{
+		fmt.Println(sumList.Data)
+		sumList = sumList.Next
+	}
 
 
 }
@@ -37,6 +54,7 @@ func (node *NodePtrStruct) addTwoNumbers(node2 *NodePtrStruct) *NodePtr {
 	}
 	n1 := node.Head
 	n2 := node2.Head
+	n1Temp := n1
 	sum := 0
 	for n1 != nil && n2 != nil{
 		sum = n1.Data + n2.Data
@@ -45,11 +63,19 @@ func (node *NodePtrStruct) addTwoNumbers(node2 *NodePtrStruct) *NodePtr {
 		n1.Data = first
 		if n1.Next != nil{
 			n1.Next.Data += last
+		}else{
+			n1.Next = &NodePtr{Data:last, Next:nil}
+			n1Temp = n1
 		}
 		n1 = n1.Next
 		n2 = n2.Next
 	}
 
-	return n1
+	for n2 != nil {
+		n1Temp.Next = n2
+		n2 = n2.Next
+	}
+
+	return node.Head
 
 }

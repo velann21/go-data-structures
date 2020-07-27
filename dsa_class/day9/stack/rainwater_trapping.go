@@ -1,5 +1,6 @@
 package main
 
+
 import "fmt"
 
 func main() {
@@ -64,5 +65,4 @@ func (stk *RectStackNode1) Peek()*RectStack1{
 func (stk *RectStackNode1) IsEmpty()bool{
 	return stk.Head == nil
 }
-
 

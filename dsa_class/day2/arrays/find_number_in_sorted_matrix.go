@@ -1,4 +1,4 @@
-package main
+package arrays
 
 
 //input: 1  6  7  10

@@ -1,4 +1,4 @@
-package main
+package linked_list
 
 func main() {
 	node := NodeStruct{}

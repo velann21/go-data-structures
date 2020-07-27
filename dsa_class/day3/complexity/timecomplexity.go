@@ -1,4 +1,4 @@
-package day3
+package complexity
 
 import "fmt"
 

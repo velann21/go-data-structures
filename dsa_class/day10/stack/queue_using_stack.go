@@ -63,6 +63,7 @@ func (stk *StackNode1) Pop()*Stack1{
 	return temp
 }
 
+
 func (stk *StackNode1) Peek()*Stack1{
 	if stk.Head == nil{
 		return nil

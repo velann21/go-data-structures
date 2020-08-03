@@ -140,9 +140,6 @@ func (tree *TreeNode) CountLeafNodes(root *Tree)int{
 
 }
 
-
-
-
 type Queue struct {
 	Storage []*Tree
 }

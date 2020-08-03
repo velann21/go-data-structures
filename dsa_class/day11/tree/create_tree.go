@@ -9,7 +9,8 @@ func main() {
 	treeNode.InsertBinaryTree(20, 30)
 	treeNode.InsertBinaryTree(25, 27)
 	treeNode.InsertBinaryTree(35, 37)
-	treeNode.InsertBinaryTree(89, -1)
+	treeNode.InsertBinaryTree(92, 100)
+	treeNode.InsertBinaryTree(95, 101)
 
 	//treeNode.PreOrder(treeNode.Root)
 
@@ -19,7 +20,9 @@ func main() {
 
 	//treeNode.LevelOrder(treeNode.Root)
 
-	fmt.Print(treeNode.CountNodes(treeNode.Root))
+	//fmt.Print(treeNode.CountNodes(treeNode.Root))
+	//fmt.Println(treeNode.CountFullNodes(treeNode.Root))
+	fmt.Println(treeNode.CountLeafNodes(treeNode.Root))
 }
 
 type Tree struct {
@@ -102,12 +105,40 @@ func (tree *TreeNode) CountNodes(root *Tree)int{
 	if root == nil{
 		return 0
 	}
-	_ = tree.CountNodes(root.LeftChild)
-	_ = tree.CountNodes(root.RightChild)
-	tree.counter = tree.counter+1
+	x := tree.CountNodes(root.LeftChild)
+	y := tree.CountNodes(root.RightChild)
+	tree.counter = 1+x+y
 	return tree.counter
 }
 
+func (tree *TreeNode) CountFullNodes(root *Tree)int{
+	if root == nil{
+		return 0
+	}
+	if root.LeftChild != nil && root.RightChild != nil{
+		x := tree.CountFullNodes(root.LeftChild)
+		y := tree.CountFullNodes(root.RightChild)
+		return 1+x+y
+	}else{
+		return 0
+	}
+
+}
+
+
+func (tree *TreeNode) CountLeafNodes(root *Tree)int{
+	if root == nil{
+		return 0
+	}
+	if root.LeftChild != nil && root.RightChild != nil{
+		x := tree.CountLeafNodes(root.LeftChild)
+		y := tree.CountLeafNodes(root.RightChild)
+		return x+y
+	}else{
+		return 1
+	}
+
+}
 
 type Queue struct {
 	Storage []*Tree

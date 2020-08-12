@@ -12,6 +12,8 @@ func main() {
 	tree.Insert(15)
 	tree.Insert(25)
 	tree.Insert(35)
+	tree.Insert(8)
+
 	tree.PrintKthNode(tree.Root, 3)
 
 }
@@ -54,6 +56,7 @@ func (tree *TreeTraverser) PrintKthNode(root *TreeNode1, k int){
 	}
 	if k==1{
 		fmt.Println(root.Data)
+		return
 	}
 	tree.PrintKthNode(root.LeftChild, k-1)
 	tree.PrintKthNode(root.RightChild, k-1)

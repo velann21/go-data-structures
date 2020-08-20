@@ -1,4 +1,4 @@
-package arrays
+package main
 
 import "fmt"
 
@@ -10,7 +10,7 @@ import "fmt"
 //op:=[-2,8]
 
 func main() {
-	o1, o2 := findPair([]int{6,2,-2,8}, 6)
+	o1, o2 := findPair([]int{5,6,1,2,3}, 6)
 	fmt.Println(o1, ",",o2)
 }
 

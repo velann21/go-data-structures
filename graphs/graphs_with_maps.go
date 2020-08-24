@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"sync"
 )
-import "github.com/cheekybits/genny/generic"
-
 var g ItemGraph
 func main() {
 	nA := Node{"A"}

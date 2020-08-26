@@ -136,11 +136,13 @@ func (q *QueueUtil) Dequeue()*GraphNode{
 		q.Head = q.Head.Next
 	}else {
 		q.Head = nil
+
 	}
 	return temp.Data
 }
 
 func (q *QueueUtil) IsEmpty()bool{
 	return q.Head == nil
+
 }
 

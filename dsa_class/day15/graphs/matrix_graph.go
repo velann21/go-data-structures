@@ -51,12 +51,12 @@ func (g *GraphUtil) AddEgdes(node1 string, node2 string){
 	if node1 == "" || node2 == ""{
 		return
 	}
-	fromnodeVertex := g.VertexTracker[node1]
-	tonodeVertex := g.VertexTracker[node2]
-	if fromnodeVertex == nil || tonodeVertex == nil{
+	fromNodeVertex := g.VertexTracker[node1]
+	toNodeVertex := g.VertexTracker[node2]
+	if fromNodeVertex == nil || toNodeVertex == nil{
 		return
 	}
-	g.matrix[fromnodeVertex.Position][tonodeVertex.Position] = 1
+	g.matrix[fromNodeVertex.Position][toNodeVertex.Position] = 1
 }
 
 func (g *GraphUtil) PrintGraph(){
@@ -81,12 +81,12 @@ func (g *GraphUtil) BFS(start string){
 	}
 	visitedMap := map[string]bool{}
 	startingNode := g.VertexTracker[start]
-	sn := StackUtil{}
+	sn := QueueUtil{}
 	visitedMap[startingNode.Label] = true
-	sn.Push(startingNode)
+	sn.Enqueue(startingNode)
 	fmt.Println(startingNode.Label)
 	for !sn.IsEmpty(){
-		element := sn.Pop()
+		element := sn.Dequeue()
 		elementPosition := g.VertexTracker[element.Label].Position
 		for i, edges := range g.matrix{
 			if i != elementPosition{
@@ -96,59 +96,53 @@ func (g *GraphUtil) BFS(start string){
 				edgeInStr := g.InverseVertexTracker[j]
 				if edge == 1 && !visitedMap[edgeInStr.Label]{
                     fmt.Println(g.InverseVertexTracker[j].Label)
-					sn.Push(edgeInStr)
+					sn.Enqueue(edgeInStr)
                     visitedMap[edgeInStr.Label] = true
 				}
 			}
+			break
 		}
 	}
 }
 
 
-
-type StackNode struct {
+type Queue struct {
 	Data *GraphNode
-	Next *StackNode
+	Next *Queue
 }
 
-type StackUtil struct {
-	Head *StackNode
+type QueueUtil struct {
+	Head *Queue
+	Tail *Queue
 }
 
-func (stk *StackUtil) Push(data *GraphNode){
-	if data == nil{
+func (q *QueueUtil) Enqueue(data *GraphNode){
+	if q.Head == nil{
+		q.Head = &Queue{Data:data, Next:nil}
+		q.Tail = q.Head
 		return
 	}
-	if stk.Head == nil{
-		stk.Head = &StackNode{Data:data, Next:nil}
-		return
-	}
-	newNode := &StackNode{Data:data, Next:stk.Head}
-	stk.Head = newNode
+	newVertex := &Queue{Data:data, Next:nil}
+	q.Tail.Next = newVertex
+	q.Tail = newVertex
 }
 
-func (stk *StackUtil) Pop()*GraphNode{
-	if stk.Head == nil{
+func (q *QueueUtil) Dequeue()*GraphNode{
+	if q.Head == nil{
 		return nil
 	}
+	temp := q.Head
+	if q.Head.Next != nil{
+		q.Head = q.Head.Next
+	}else {
+		q.Head = nil
 
-	temp := stk.Head
-	if stk.Head.Next != nil{
-		stk.Head = stk.Head.Next
-	}else{
-		stk.Head = nil
 	}
 	return temp.Data
 }
 
-func (stk *StackUtil) IsEmpty()bool{
-	return stk.Head == nil
-}
+func (q *QueueUtil) IsEmpty()bool{
+	return q.Head == nil
 
-func (stk *StackUtil) Peek()*GraphNode{
-	if stk.Head == nil{
-		return nil
-	}
-	return stk.Head.Data
 }
 

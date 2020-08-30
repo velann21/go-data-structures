@@ -149,5 +149,5 @@ func (stk *StackUtil) Peek()*Vertex{
 		return nil
 	}
 	return stk.Head.Data
+
 }
-////

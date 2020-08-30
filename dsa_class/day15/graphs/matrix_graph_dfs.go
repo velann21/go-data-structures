@@ -150,4 +150,3 @@ func (stk *StackUtil) Peek()*Vertex{
 	}
 	return stk.Head.Data
 }
-////

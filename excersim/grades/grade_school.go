@@ -1,5 +1,5 @@
-package grade
 
+package grade
 import (
 	"errors"
 	"fmt"

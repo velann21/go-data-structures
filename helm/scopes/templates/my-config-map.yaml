@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: {{ .Release.Name}}-configmap
+data:
+   myvalue: "Sample config map"
+   name: {{ .Values.name }}
+   environment: {{ .Values.environment }}
+   proddatapipelineurl: {{ quote .Values.datapipelineurls.prod }}
+   qadatapipeline: {{ quote .Values.datapipelineurls.qa }}
+   createdtime: {{ now | date "2020-12-10" | quote }}
+   formatedName: {{ .Values.name | upper | quote  }}
+   defaultName: {{ .Values.fName | default "velan" | upper  | quote}}
+   {{- if eq .Values.name "velan"}}
+   partnerType: {{ "husband" | upper | quote }}
+   {{- else if eq .Values.name "Indu" }}
+   partnerType: {{ "wife" | upper | quote }}
+   {{- else }}
+   partnerType: {{ "unkown" | upper | quote }}
+   {{- end -}}
+   {{- with .Values.familyDetails}}
+   familyname: {{.name | upper }}
+   familyPlace: {{.place | upper}}
+   familyCountry: {{.country | upper}}
+   familyContinent: {{.continent | upper}}
+   {{- end}}

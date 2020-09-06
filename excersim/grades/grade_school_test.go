@@ -1,6 +1,6 @@
 
 
-package main
+package grade
 
 import (
 	"fmt"
@@ -83,6 +83,7 @@ func TestSchoolA_ListAllGradeStudentsStudents(t *testing.T) {
 	student1 := "velan"
 	student2 := "Apple"
 	student3 := "Banana"
+	student4 := "Abac"
 	err := school.AddStudent(2, student)
 	if err != nil {
 		log.Fatal("Error should be empty")
@@ -96,6 +97,10 @@ func TestSchoolA_ListAllGradeStudentsStudents(t *testing.T) {
 		log.Fatal("Error should be empty")
 	}
 	err = school.AddStudent(1, student3)
+	if err != nil {
+		log.Fatal("Error should be empty")
+	}
+	err = school.AddStudent(1, student4)
 	if err != nil {
 		log.Fatal("Error should be empty")
 	}

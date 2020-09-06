@@ -1,0 +1,5 @@
+name: "velan"
+environment: production
+datapipelineurls:
+    prod: http://record.com
+    qa: http://record.com

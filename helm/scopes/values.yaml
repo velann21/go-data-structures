@@ -1,0 +1,10 @@
+name: "velan"
+environment: production
+datapipelineurls:
+    prod: http://record.com
+    qa: http://record.com
+familyDetails:
+      name: Shan
+      place: erode
+      country: India
+      continent: Asia

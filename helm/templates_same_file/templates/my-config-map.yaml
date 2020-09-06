@@ -1,0 +1,54 @@
+{{- define "mychart.name" }}
+   labels:
+       app: familyproject
+       k8s-app-name: famk8s
+       owned_by: platform
+       servType: backend
+       releaseName: {{ .Release.Name }}
+       chartName: {{ .Chart.Name }}
+       ReleaseSrv: {{ .Release.Service }}
+       ChartVersion: {{ .Chart.AppVersion }}
+{{- end }}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: {{ .Release.Name}}-configmap
+   {{- template "mychart.name" . }}
+data:
+   myvalue: "Sample config map"
+   name: {{ .Values.name }}
+   environment: {{ .Values.environment }}
+   proddatapipelineurl: {{ quote .Values.datapipelineurls.prod }}
+   qadatapipeline: {{ quote .Values.datapipelineurls.qa }}
+   createdtime: {{ now | date "2020-12-10" | quote }}
+   formatedName: {{ .Values.name | upper | quote  }}
+   defaultName: {{ .Values.fName | default "velan" | upper  | quote}}
+   {{- if eq .Values.name "velan"}}
+   partnerType: {{ "husband" | upper | quote }}
+   {{- else if eq .Values.name "Indu" }}
+   partnerType: {{ "wife" | upper | quote }}
+   {{- else }}
+   partnerType: {{ "unknown" | upper | quote }}
+   {{- end -}}
+   {{- with .Values.familyDetails}}
+   familyname: {{.name | upper }}
+   familyPlace: {{.place | upper}}
+   familyCountry: {{.country | upper}}
+   familyContinent: {{.continent | upper}}
+   {{- end}}
+   vehicleNames: |-
+      {{- range .Values.vehicleName }}
+      - {{ . | title | quote }}
+      {{- end }}
+   {{- $relName := .Release.Name -}}
+   {{- with .Values.familyDetails}}
+   familyName1: {{ .name | upper}}
+   Relname: {{ $relName }}
+   {{- end}}
+   LangUsed: |-
+       {{- range $index, $lang := .Values.vehicleName}}
+       - {{$index}}: {{ $lang }}
+       {{- end -}}
+   
+

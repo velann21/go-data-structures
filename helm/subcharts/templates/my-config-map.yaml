@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: {{ .Release.Name}}-configmap
+   {{- template "mychart.name" . }}
+{{- include "mychart.version" . | indent 7}}
+data:
+   myvalue: "Sample Config Map"
+{{- include "mychart.version" . | indent 3}}

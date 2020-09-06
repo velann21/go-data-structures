@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+   name: {{ .Release.Name}}-configmap
+data:
+   myvalue: "Sample config map"
+   name: {{ .Values.name }}
+   environment: {{ .Values.environment }}
+   proddatapipelineurl: {{quote .Values.datapipelineurls.prod }}
+   qadatapipeline: {{quote .Values.datapipelineurls.qa }}

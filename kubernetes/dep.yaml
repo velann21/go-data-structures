@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  # minReadySeconds: 30
+  selector:
+    matchLabels:
+      app: webapp
+  replicas: 2
+  template: # template for the pods
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: singaravelan21/velan_py:firsttry

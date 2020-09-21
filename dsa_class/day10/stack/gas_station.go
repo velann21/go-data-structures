@@ -3,8 +3,9 @@ package main
 import "fmt"
 
 func main() {
-    gas := []int{1,2,3,4,5}
-	cost := []int{3,4,5,1,2}
+    gas := []int{5,4,3,2,1}
+
+	cost := []int{5,1,5,4,3}
 	result := CanCircleBackToStart(gas, cost)
 	fmt.Println(result)
 }
@@ -20,7 +21,7 @@ func CanCircleBackToStart(gas []int, cost []int)int{
 		tankRem = gasRem - costRem
 		if tankRem < 0{
 			tankRem = 0
-			start = k
+			start = k+1
 		}
 	}
 

@@ -25,7 +25,8 @@ data:
    familyContinent: {{.continent | upper}}
    {{- end}}
    vehicleNames: |-
-      {{- range .Values.vehicleName }}
-      - {{ . | title | quote }}
+      {{- range $key, $value := .Values.vehicleName }}
+      - name: {{ $value.name }}
+        container: {{ $value.container }}
       {{- end }}
 

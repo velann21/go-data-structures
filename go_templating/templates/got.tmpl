@@ -1,0 +1,8 @@
+{{.Name}} of house {{.House}}
+
+{{if .Traits -}}
+Traits:
+    {{- range .Traits}}
+    - {{. -}}
+    {{end}}
+{{end}}

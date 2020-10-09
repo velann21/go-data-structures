@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Name}}
+data:
+  myvalue: "Sample Config Map"
+  {{ ($buc := call .GetBucket .)}}
+  {{if ( $values := call .UnMarshalYaml . ) -}}
+  {{- range $key := $values}}
+  {{ call $buc.PrintArgsfunc $key}}
+  {{end}}
+  {{end}}

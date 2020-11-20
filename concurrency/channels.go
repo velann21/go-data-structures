@@ -16,17 +16,13 @@ func main() {
 		return ch
 	}
 
-	consumer := func(ch <-chan int, done chan bool){
+	consumer := func(ch <-chan int){
 		fmt.Println("Inside the consumer")
 		for v := range ch {
 			fmt.Println("Channel,", v)
 		}
-		done <- true
 		fmt.Println("Done recieve")
 	}
-
-
-	done := make(chan bool)
 	ch := owner()
-	consumer(ch, done)
+	consumer(ch)
 }

@@ -15,16 +15,20 @@ func main() {
 	}()
 
 
-	for{
-		select{
-		case ch1Rcv := <- ch1:
-			fmt.Println(ch1Rcv)
-		default:
-			fmt.Println("It is default block no message")
-			time.Sleep(2 * time.Second)
+	go func(){
+		for{
+			select{
+			case ch1Rcv := <- ch1:
+				fmt.Println(ch1Rcv)
+			default:
+				fmt.Println("It is default block no message")
+				time.Sleep(2 * time.Second)
+			}
+			fmt.Println("Processing .....")
+			time.Sleep(1500* time.Millisecond)
 		}
-		fmt.Println("Processing .....")
-		time.Sleep(1500* time.Millisecond)
-	}
+	}()
+
+
 
 }

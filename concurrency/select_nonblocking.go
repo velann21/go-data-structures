@@ -28,7 +28,4 @@ func main() {
 			time.Sleep(1500* time.Millisecond)
 		}
 	}()
-
-
-
 }

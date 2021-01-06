@@ -3,5 +3,4 @@ kind: ConfigMap
 metadata:
    name: my-configmap
 data:
-
    myvalue: "Sample config map"

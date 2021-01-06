@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
-	"k8s.io/api/extensions/v1beta1"
 	"k8s.io/client-go/kubernetes/scheme"
 	//"k8s.io/apimachinery/pkg/runtime"
 	//"k8s.io/api/core/v1"
@@ -15,6 +14,7 @@ func main() {
 		panic(err.Error())
 	}
 
+	fmt.Println("Entering desreriler")
 	decode := scheme.Codecs.UniversalDeserializer().Decode
 	rendobj, _, err := decode(bytes, nil, nil)
 	if err != nil {

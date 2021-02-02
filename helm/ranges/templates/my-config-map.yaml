@@ -26,7 +26,9 @@ data:
    {{- end}}
    vehicleNames: |-
       {{- range $key, $value := .Values.vehicleName }}
-      - name: {{ $value.name }}
-        container: {{ $value.container }}
+         -
+      {{- range $kk, $vv := $value }}
+         {{ $kk }}: {{ $vv }}
+      {{- end }}
       {{- end }}
 

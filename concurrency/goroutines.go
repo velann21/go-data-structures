@@ -16,7 +16,16 @@ func fun(str string){
 func main() {
 	fun("Direct call")
 
-	go fun("Go routine call")
+	//Normal Goroutine call
+	go fun("goroutine-1")
+
+	//Anonymus func call
+	go func (){
+		fun("goroutine-2")
+	}()
+
+	funcExe := fun
+	funcExe("goroutine-3")
 
 	time.Sleep(10*time.Second)
 }

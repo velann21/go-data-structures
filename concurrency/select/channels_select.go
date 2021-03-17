@@ -9,8 +9,8 @@ import (
 func main() {
 	capsChn := make(chan string, 3)
 	trimChn := make(chan string, 3)
-	resultChan := make(chan string, 10)
-	termChan := make(chan bool)
+	resultChan1 := make(chan string, 10)
+	resultChan2 := make(chan string, 10)
 	dataSet := []string{"Indumathi Selvam", "Velan Nandhakumar", "Nandhini Nandhakumar"}
 
 	go func(dataSet []string, capsChn chan string){
@@ -19,6 +19,7 @@ func main() {
 			capsChn <- uppercaseName
 		}
 		close(capsChn)
+		//close(resultChan2)
 	}(dataSet, capsChn)
 
 	go func(dataSet []string, trimChn chan string){
@@ -27,40 +28,44 @@ func main() {
 			trimChn <- trimmedName
 		}
 		close(trimChn)
+		//close(resultChan1)
 	}(dataSet, trimChn)
 
 	wg := sync.WaitGroup{}
 	wg.Add(2)
 	go func(){
-		isWait := true
-		for isWait{
+		for {
 			select {
 			case trimmedValue, ok :=<-trimChn:
-				if ok{
-					fmt.Println("Trimmed result")
-					resultChan <- trimmedValue
+				fmt.Println("Trimmed result")
+				resultChan1 <- trimmedValue
+				if !ok{
+					trimChn = nil
 				}
 			case capsValue, ok :=<-capsChn:
-				if ok {
-					fmt.Println("Caps result")
-					resultChan <- capsValue
-				}
-			case term := <- termChan:
-				if term{
-					fmt.Println("Inside term chan block")
-					isWait = false
-					close(resultChan)
+				fmt.Println("Caps result")
+				resultChan2 <- capsValue
+				if !ok {
+					capsChn = nil
 				}
 			}
-
+			if trimChn == nil && capsChn == nil {
+				close(resultChan1)
+				close(resultChan2)
+				wg.Done()
+				wg.Done()
+				break
+			}
 		}
 	}()
     go func (){
-		for  v := range resultChan{
+		for  v := range resultChan1{
 		  fmt.Println("Result",v)
 		}
+		for v := range resultChan2 {
+			fmt.Println("Result",v)
+		}
 		fmt.Println("Done result gather")
-		close(resultChan)
 		fmt.Println("Collected the result")
 	}()
 	wg.Wait()
@@ -68,7 +73,6 @@ func main() {
 	//for  v := range resultChan{
     //   fmt.Println(v)
 	//}
-	termChan <- true
 
 
 }

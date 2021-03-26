@@ -19,7 +19,6 @@ func main() {
 			capsChn <- uppercaseName
 		}
 		close(capsChn)
-		//close(resultChan2)
 	}(dataSet, capsChn)
 
 	go func(dataSet []string, trimChn chan string){
@@ -28,7 +27,6 @@ func main() {
 			trimChn <- trimmedName
 		}
 		close(trimChn)
-		//close(resultChan1)
 	}(dataSet, trimChn)
 
 	wg := sync.WaitGroup{}

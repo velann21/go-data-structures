@@ -1,6 +1,9 @@
 package recursion
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestHeadRecursion(t *testing.T){
 	HeadRecursion(3)
@@ -9,4 +12,10 @@ func TestHeadRecursion(t *testing.T){
 func TestTailRecursion(t *testing.T){
 	TailRecursion(3)
 }
+
+func TestRecusrionWithGlobal(t *testing.T){
+	fmt.Println(RecusrionWithGlobal(3))
+}
+
+
 

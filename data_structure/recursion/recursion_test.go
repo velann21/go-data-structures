@@ -16,6 +16,3 @@ func TestTailRecursion(t *testing.T){
 func TestRecusrionWithGlobal(t *testing.T){
 	fmt.Println(RecusrionWithGlobal(3))
 }
-
-
-

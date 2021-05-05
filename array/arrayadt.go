@@ -19,15 +19,6 @@ func main(){
 	goFrom1To10()
 }
 
-func Length(array *[10]string)int{
-	length := 0
-	for _, v := range array{
-		if v != ""{
-			length ++
-		}
-	}
-	return length
-}
 
 func Append(arr [10]string, elem  string){
 	len := Length1(arr)

@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+
 type List interface {
 	Add(element int)
 	DisplayArray()

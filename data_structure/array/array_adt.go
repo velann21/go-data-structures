@@ -255,7 +255,6 @@ func (al *ArrayList) MergeKSortedArrays(array1, array2 []int)[]int{
 	return auxiliaryArray
 }
 
-
 func main() {
 	list := NewArrayList(2)
 	for i:=0; i<=20; i++{
@@ -277,7 +276,6 @@ func main() {
 		return
 	}
 	fmt.Println("Found")
-
 }
 
 

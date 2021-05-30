@@ -262,7 +262,6 @@ func (al *ArrayList) MergeKSortedArrays(array1, array2 []int)[]int{
 	return auxiliaryArray
 }
 
-<<<<<<< HEAD
 func (al *ArrayList) FindPair(array []int, target int)[]int{
 	mapper := make(map[int]int, 0)
 	for index, value := range array{
@@ -283,12 +282,7 @@ func (al *ArrayList) FindPair(array []int, target int)[]int{
 func (al *ArrayList) FindFirstMissingElement(array []int)int{
 	if len(array) <= 0 || len(array) == 1{
 		return -1
-=======
-func main() {
-	list := NewArrayList(2)
-	for i:=0; i<=20; i++{
-		list.Add(i)
->>>>>>> a928e17854421af56f95c00af67d66bc0d841392
+
 	}
 	diff := array[0]-0
 	for i:=0; i<len(al.Array); i++{
@@ -332,7 +326,6 @@ func (al *ArrayList) FindDuplicates(array []int)[]int{
 		}
 
 	}
-<<<<<<< HEAD
 	return auxilaryArray
 }
 
@@ -399,9 +392,6 @@ func (al *ArrayList)  IsValidSeq(array []int, sequence []int)bool{
 	return true
 	}
 	return false
-=======
-	fmt.Println("Found")
->>>>>>> a928e17854421af56f95c00af67d66bc0d841392
 }
 
 

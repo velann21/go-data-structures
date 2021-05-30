@@ -1,4 +1,4 @@
-package main
+package array
 
 import (
 	"fmt"
@@ -12,6 +12,13 @@ type List interface {
 	DeleteElement(index int)
 	LinearSearch(element int)int
 	BinarySearch(element int)int
+	FindPair(array []int, target int)[]int
+	FindFirstMissingElement(array []int)int
+	FindAllMissingElement(array []int)[]int
+	FindDuplicates(array []int)[]int
+	CountDuplicates(array []int)map[int]int
+	FindMissingElementUnSortedList(array []int, maxNumber int)[]int
+	IsValidSeq(array []int, sequence []int)bool
 }
 type ArrayList struct {
 	Size int
@@ -255,30 +262,166 @@ func (al *ArrayList) MergeKSortedArrays(array1, array2 []int)[]int{
 	return auxiliaryArray
 }
 
-
-func main() {
-	list := NewArrayList(2)
-	for i:=0; i<=20; i++{
-		list.Add(i)
+func (al *ArrayList) FindPair(array []int, target int)[]int{
+	mapper := make(map[int]int, 0)
+	for index, value := range array{
+		mapper[value] = index
 	}
-	list.DisplayArray()
-	list.DeleteElement(5)
-
-	element := list.LinearSearch(1)
-	if element == 0{
-		fmt.Println("Not Found")
-		return
+	outputArray := make([]int, 0)
+	for index, value := range array{
+		difference := target-value
+		if mapper[difference] != 0 && mapper[difference] != index{
+			outputArray = append(outputArray, index)
+			outputArray = append(outputArray, mapper[difference])
+			return outputArray
+		}
 	}
-	fmt.Println("Found")
+	return outputArray
+}
 
-	IsPresent := list.BinarySearch(4)
-	if IsPresent == 0{
-		fmt.Println("Not Found")
-		return
+func (al *ArrayList) FindFirstMissingElement(array []int)int{
+	if len(array) <= 0 || len(array) == 1{
+		return -1
 	}
-	fmt.Println("Found")
+	diff := array[0]-0
+	for i:=0; i<len(al.Array); i++{
+		if array[i]-i != diff{
+			fmt.Println(array[i])
+			return i+diff
+		}
+	}
+	return -1
+}
+
+func (al *ArrayList) FindAllMissingElement(array []int)[]int{
+	if len(array) <= 0 || len(array) == 1{
+		return nil
+	}
+	auxilaryArray := make([]int, 0)
+	diff := array[0]-0
+	for i:=0; i<len(array); i++{
+		currentDiff := array[i]-i
+		fmt.Println(currentDiff)
+		if currentDiff != diff{
+			for diff < currentDiff{
+				auxilaryArray = append(auxilaryArray, i+diff)
+				diff++
+			}
+		}
+	}
+	return auxilaryArray
+}
+
+func (al *ArrayList) FindDuplicates(array []int)[]int{
+	if len(array) <= 0 || len(array) == 1{
+		return nil
+	}
+	auxilaryArray := make([]int, 0)
+	var ldup = 0
+	for i:=0; i<len(array); i++{
+		if i+1 <len(array) && array[i] == array[i+1] && array[i] != ldup{
+			auxilaryArray = append(auxilaryArray, array[i])
+			ldup = array[i]
+		}
+
+	}
+	return auxilaryArray
+}
+
+func (al *ArrayList) CountDuplicates(array []int)map[int]int{
+	if len(array) <= 0 || len(array) == 1{
+		return nil
+	}
+	j := 0
+	auxilaryMap := make(map[int]int, 0)
+	for i:=0; i<len(array); i++{
+		if i+1 <=len(array) && array[i] == array[i+1]{
+			j = i
+			for array[j] == array[i]&&j<len(array){
+				j++
+			}
+			totalCount := i-j
+			auxilaryMap[array[i]] = totalCount
+		}
+	}
+	return auxilaryMap
+}
+
+func (al *ArrayList) FindMissingElementUnSortedList(array []int, maxNumber int)[]int{
+	if len(array) <= 0 || len(array) == 1{
+		return nil
+	}
+	bitset := make([]int, maxNumber+1)
+	for _, value := range array{
+		bitset[value] = 1
+	}
+	auxilaryArray := make([]int, 0)
+	for index, value := range bitset{
+		if value == 0{
+			auxilaryArray = append(auxilaryArray, index)
+		}
+	}
+	return auxilaryArray
+}
+
+func (al *ArrayList) FindingDuplicatesUsingHash(array []int){
+
+}
+
+func (al *ArrayList) FindingDuplicatesUnSortedList(array []int){
 
 }
 
 
+func (al *ArrayList)  IsValidSeq(array []int, sequence []int)bool{
+	if len(sequence) == 1{
+		return array[0] == sequence[0]
+	}
 
+	pointer2 := 0
+	temp := sequence[pointer2]
+	size := len(sequence)-1
+	for _, v := range array{
+		if v == temp && pointer2 < size{
+			pointer2 = pointer2+1
+			temp = sequence[pointer2]
+	}
+	}
+	if pointer2 == size{
+	return true
+	}
+	return false
+}
+
+
+
+//func main() {
+//	array := []int{3, 5, -4, 8,11, 1, -1, 6}
+//	list := NewArrayList(2)
+//	pairArray := list.FindPair(array, 10)
+//	fmt.Println(pairArray)
+//
+//	for i:=0; i<=20; i++{
+//		list.Add(i)
+//	}
+//	list.DisplayArray()
+//	list.DeleteElement(5)
+//
+//	element := list.LinearSearch(1)
+//	if element == 0{
+//		fmt.Println("Not Found")
+//		return
+//	}
+//	fmt.Println("Found")
+//
+//	IsPresent := list.BinarySearch(4)
+//	if IsPresent == 0{
+//		fmt.Println("Not Found")
+//		return
+//	}
+//	fmt.Println("Found")
+//
+//}
+//
+//
+//

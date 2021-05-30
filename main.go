@@ -13,9 +13,29 @@ import "fmt"
 //op:=[-2,8]
 
 func main() {
-	o1, o2 := findPair([]int{5,6,1,2,3}, 5)
-	fmt.Println(o1, ",",o2)
+	//o1, o2 := findPair([]int{5,6,1,2,3}, 5)
+	//fmt.Println(o1, ",",o2)
+	lastDigit := 12344346 % 10
+	number := 12344346 / 10
+	fmt.Println(lastDigit)
+	fmt.Println(number)
+	op := convertRec(120)
+	fmt.Println(op)
 }
+
+func convertRec(num int)int{
+	if num==0 {
+		return 0
+	}
+	digit := num%10
+	if digit==0{
+		digit=5
+	}
+	head := convertRec(num/10)
+	tail := (head*10)+digit
+	return tail
+}
+
 
 func findPair(input []int, target int)(int, int){
 	tracker := make(map[int]int)

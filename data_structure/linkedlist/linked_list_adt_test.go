@@ -141,6 +141,8 @@ func TestLinkedList_Sum(t *testing.T) {
 	}
 }
 
+
+
 func TestLinkedList_Set(t *testing.T) {
 	ll := NewLinkedList()
 	ll.Insert(10)
@@ -198,6 +200,35 @@ func TestLinkedList_RemoveAt(t *testing.T) {
 
 	for _, test := range tests{
 		err := test.object.RemoveAt(test.index)
+		assert.IsType(t, test.err, err)
+		data, err := test.object.ReturnNodesData(test.object.GetHead())
+		assert.Equal(t, test.expectedResult, data)
+	}
+}
+
+func TestLinkedList_ReverseLL(t *testing.T) {
+	ll := NewLinkedList()
+	ll.Insert(10)
+	ll.Insert(20)
+	ll.Insert(30)
+	ll.Insert(40)
+
+	linkedListTwo := NewLinkedList()
+	linkedListTwo.Insert(10)
+	linkedListThree := NewLinkedList()
+
+	tests := []struct{
+		object List
+		expectedResult []int
+		err error
+	}{
+		{object: ll,expectedResult: []int{40,30,20,10},err: nil},
+		{object: linkedListTwo,expectedResult: []int{10},err: nil},
+		{object: linkedListThree,expectedResult: nil,err: InvalidReq},
+	}
+
+	for _, test := range tests{
+		err := test.object.ReverseLL()
 		assert.IsType(t, test.err, err)
 		data, err := test.object.ReturnNodesData(test.object.GetHead())
 		assert.Equal(t, test.expectedResult, data)

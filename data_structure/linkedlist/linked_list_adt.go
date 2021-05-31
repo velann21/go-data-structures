@@ -17,6 +17,7 @@ type List interface {
 	Sum(Head *Node)(int,error)
 	Set(data int,  index int)error
 	RemoveAt(index int)error
+	ReverseLL()error
 }
 
 func NewLinkedList()List{
@@ -152,11 +153,26 @@ func (ll *LinkedList) RemoveAt(index int)error{
 	}
 	temp := preNode.Next
 	preNode.Next = temp.Next
-
-
 	return nil
 }
 
-func (ll *LinkedList) ReverseLL(){
+func (ll *LinkedList) ReverseLL()error{
+	if ll.Head == nil{
+		return InvalidReq
+	}
+	if ll.Head.Next == nil{
+		return nil
+	}
+	var firstFollower *Node
+	var secondFollower *Node
+	var targetPtr = ll.Head
 
+	for targetPtr != nil{
+		firstFollower = secondFollower
+		secondFollower = targetPtr
+		targetPtr = targetPtr.Next
+		secondFollower.Next = firstFollower
+	}
+	ll.Head = secondFollower
+	return nil
 }

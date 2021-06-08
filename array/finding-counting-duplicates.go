@@ -30,7 +30,7 @@ func findingCountingDuplicates(arr []int){
 
 			j := i+1
 			// This loop is to count the number of duplicates on specific dup number
-			for j<len(arr) && arr[j] <= arr[i]{
+			for j<len(arr) && arr[j] == arr[i]{
 				j++
 			}
 

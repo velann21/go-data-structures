@@ -36,8 +36,8 @@ func (ll *Stack) Pop()(int, error){
 	data := ll.top.data
 	if ll.top.next != nil{
 		ll.top = ll.top.next
-		ll.Size--
 	}
+	ll.Size--
 	return data, nil
 }
 
@@ -60,6 +60,35 @@ func (ll *Stack) Peek(pos int)(int, error){
 		last = last.next
 		currentPos++
 	}
-
 	return 0, nil
+}
+
+func (ll *Stack) QueueUsingStack(auxilaryStack *Stack, data int)error{
+	if ll.Size != 0 && auxilaryStack == nil{
+		return InvalidData
+	}
+	if data < 0{
+		return InvalidData
+	}
+	if ll.Size == 0{
+		ll.Push(data)
+	}else {
+		for ll.Size>0{
+			data, err := ll.Pop()
+			if err != nil{
+				return InvalidData
+			}
+			auxilaryStack.Push(data)
+		}
+		ll.Push(data)
+		for auxilaryStack.Size>0{
+			data, err := auxilaryStack.Pop()
+			if err != nil{
+				return InvalidData
+			}
+			ll.Push(data)
+		}
+
+	}
+	return nil
 }

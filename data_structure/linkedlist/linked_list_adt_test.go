@@ -1,6 +1,7 @@
 package linkedlist
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -233,6 +234,79 @@ func TestLinkedList_ReverseLL(t *testing.T) {
 		data, err := test.object.ReturnNodesData(test.object.GetHead())
 		assert.Equal(t, test.expectedResult, data)
 	}
+}
+
+func TestLinkedList_DetectLoop(t *testing.T) {
+	ll := NewLinkedList()
+	ll.Insert(10)
+	ll.Insert(20)
+	ll.Insert(30)
+	ll.Insert(40)
+
+	linkedList2 := NewLinkedList()
+	linkedList2.Insert(10)
+	node2 := linkedList2.Insert(20)
+	linkedList2.Insert(30)
+	node5 := linkedList2.Insert(40)
+	node5.Next = node2
+
+	tests := []struct{
+		object List
+		expectedResult bool
+		err error
+	}{
+		{object: ll, expectedResult: false, err: nil},
+		{object: linkedList2, expectedResult: true, err: nil},
+	}
+
+	for _, test := range tests{
+		isLoopDetected, err := test.object.DetectLoop()
+		assert.Equal(t, test.expectedResult, isLoopDetected)
+		assert.IsType(t, test.err, err)
+	}
+}
+
+func TestLinkedList_SlidingWindow(t *testing.T) {
+	tests := []struct{
+		mainStr string
+		subStr string
+		expectedResult bool
+		err error
+	}{
+		{mainStr: "", subStr: "", expectedResult: false, err: InvalidReq},
+		{mainStr: "", subStr: "win", expectedResult: false, err: InvalidReq},
+		{mainStr: "win", subStr: "", expectedResult: false, err: InvalidReq},
+		{mainStr: "win", subStr: "win", expectedResult: true, err: nil},
+		{mainStr: "dodwin", subStr: "win", expectedResult: true, err: nil},
+		{mainStr: "window", subStr: "win", expectedResult: true, err: nil},
+
+	}
+	linkedList := NewLinkedList()
+	for _, test := range tests {
+		linkedList.SlidingWindow(test.mainStr, test.subStr)
+	}
+}
+
+
+func TestDoublyLinkedList_InsertDDL(t *testing.T) {
+	tests := []struct{
+		input int
+		index int
+		err error
+	}{
+		{input: 10,index: 1, err: nil},
+		{input: 20,index: 2, err: nil},
+		{input: 30,index: 3, err: nil},
+		{input: 40,index: 4, err: nil},
+		{input: 40,index: 5, err: nil},
+		{input: 50,index: 1, err: nil},
+	}
+	ddl := NewDoublyLinkedList()
+	for _, test := range tests{
+		err := ddl.Set(test.index, test.input)
+		assert.IsType(t, err, test.err)
+	}
+	fmt.Println("ssdsd")
 }
 
 func insert()*Node{

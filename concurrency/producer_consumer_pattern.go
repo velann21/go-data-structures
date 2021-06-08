@@ -20,6 +20,7 @@ func consume () {
 		msg := <-msgs
 		fmt.Println(msg)
 	}
+
 }
 
 func main () {

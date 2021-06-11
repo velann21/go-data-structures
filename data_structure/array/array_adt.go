@@ -55,6 +55,28 @@ func (al *ArrayList) expandArray() {
 	al.Size = newSize
 }
 
+func FindThreeLargestNumbers(array []int) []int {
+	// Write your code here.
+	if len(array) < 3{
+		return nil
+	}
+	auxilaryArray := make([]int,0)
+	for i:=0 ;i<len(array)-1; i++{
+		if i == 3{
+			break
+		}
+		for j:=0; j<len(array)-i-1; j++{
+			if array[j] > array[j+1]{
+				temp := array[j+1]
+				array[j+1] = array[j]
+				array[j] = temp
+			}
+		}
+		auxilaryArray = append(auxilaryArray, array[len(array)-1])
+	}
+	return nil
+}
+
 func (al *ArrayList) DeleteElement(index int){
 	if index > al.Length{
 		return

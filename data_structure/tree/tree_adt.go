@@ -2,6 +2,7 @@ package tree
 
 import (
 	"errors"
+	"fmt"
 	"sync"
 )
 
@@ -44,6 +45,7 @@ func (q *Queue) Dequeue()*Node{
 	if q.Front.Next == nil{
 		data := q.Front
 		q.Front = nil
+		q.Rear = nil
 		q.Size--
 		return data.Data
 	}
@@ -59,7 +61,7 @@ func (q *Queue) IsEmpty()bool{
 
 type Tree struct {
 	Root *Node
-	lock sync.Mutex
+	lock *sync.Mutex
 	q Queue
 }
 
@@ -88,3 +90,70 @@ func (tree *Tree) Insert(left int, right int)error{
 	}
 	return nil
 }
+
+func (tree *Tree) PreOrder(node *Node){
+	if node == nil{
+		return
+	}
+	fmt.Println(node.Data)
+	tree.PreOrder(node.LeftNode)
+	tree.PreOrder(node.RightNode)
+}
+
+
+func (tree *Tree) CountNodes(node *Node)int{
+	if node == nil{
+		return 0
+	}
+	x := tree.CountNodes(node.LeftNode)
+	y := tree.CountNodes(node.RightNode)
+	sum :=x+y+1
+	return sum
+}
+func (tree *Tree) SumValues(node *Node)int{
+	if node == nil{
+		return 0
+	}
+	x := tree.SumValues(node.LeftNode)
+	y := tree.SumValues(node.RightNode)
+	sum :=x+y+node.Data
+	return sum
+}
+
+func (tree *Tree) CountLeafNodes(node *Node)int{
+	if node == nil{
+		return 0
+	}
+	x := tree.CountLeafNodes(node.LeftNode)
+	y := tree.CountLeafNodes(node.RightNode)
+	if node.LeftNode == nil && node.RightNode ==nil{
+		return x+y+1
+	}
+	return x+y
+}
+
+func (tree *Tree) CountTwoChildedNodes(node *Node)int{
+	if node == nil{
+		return 0
+	}
+	x := tree.CountLeafNodes(node.LeftNode)
+	y := tree.CountLeafNodes(node.RightNode)
+	if node.LeftNode != nil && node.RightNode != nil{
+		return x+y+1
+	}
+	return x+y
+}
+
+var sumArray []int
+func (tree *Tree) BranchSum(node *Node, brnchSum int)[]int{
+	if node == nil{
+		return nil
+	}
+	brnchSum += node.Data
+	tree.BranchSum(node.LeftNode, brnchSum)
+	tree.BranchSum(node.RightNode, brnchSum)
+	fmt.Println("Branhsum", brnchSum)
+	sumArray = append(sumArray, brnchSum)
+	return sumArray
+}
+

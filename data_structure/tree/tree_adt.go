@@ -156,3 +156,4 @@ func (tree *Tree) BranchSum(node *Node, brnchSum int)[]int{
 	sumArray = append(sumArray, brnchSum)
 	return sumArray
 }
+

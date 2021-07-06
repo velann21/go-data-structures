@@ -126,7 +126,7 @@ func (tree *Tree) CountLeafNodes(node *Node)int{
 	}
 	x := tree.CountLeafNodes(node.LeftNode)
 	y := tree.CountLeafNodes(node.RightNode)
-	if node.LeftNode == nil && node.RightNode ==nil{
+	if node.LeftNode == nil && node.RightNode == nil{
 		return x+y+1
 	}
 	return x+y

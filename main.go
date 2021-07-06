@@ -1,4 +1,35 @@
 package main
+
+import "fmt"
+
+type Gender string
+
+const MALE Gender = "MALE"
+const FEMALE Gender = "FEMALE"
+
+func PrintGender(gender Gender){
+	if gender == MALE {
+		fmt.Println("Male")
+	}else if gender == FEMALE{
+		fmt.Println("Female")
+	}else{
+		fmt.Println("No Match Found")
+	}
+}
+
+func main() {
+	PrintGender(MALE)
+}
+
+
+
+
+
+
+
+
+
+
 //
 //
 //package main

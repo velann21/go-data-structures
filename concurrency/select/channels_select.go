@@ -51,7 +51,6 @@ func main() {
 				close(resultChan1)
 				close(resultChan2)
 				wg.Done()
-				wg.Done()
 				break
 			}
 		}

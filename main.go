@@ -21,18 +21,10 @@ func main() {
 	PrintGender(MALE)
 }
 
-
-
-
-
-
-
-
-
-
 //
 //
 //package main
+
 //
 //import (
 //	"errors"
